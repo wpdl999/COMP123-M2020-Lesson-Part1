@@ -25,7 +25,6 @@ namespace COMP123_M2020_Lesson5_Part1
             greenEnemy.transform.position = new Vector2D(x: 60.0f, y: 80.0f);
             Console.WriteLine(greenEnemy.ToString());
 
-
             redEnemy.FireBullet();
             redEnemy.transform.position = new Vector2D();
             Console.WriteLine(redEnemy.ToString());
@@ -43,13 +42,13 @@ namespace COMP123_M2020_Lesson5_Part1
             //Console.WriteLine(player.Name);
             //Console.WriteLine(player.transform.ToString());
 
-            Console.WriteLine(player.ToString());
+            //Console.WriteLine(player.ToString());
 
-            Console.WriteLine(greenEnemy.ToString());
-            greenEnemy.FireBullet();
+            //Console.WriteLine(greenEnemy.ToString());
+            //greenEnemy.FireBullet();
 
-            Console.WriteLine(redEnemy.ToString());
-            redEnemy.FireBullet();
+            //Console.WriteLine(redEnemy.ToString());
+            //redEnemy.FireBullet();
 
             // listen for any key
             Console.ReadLine();
