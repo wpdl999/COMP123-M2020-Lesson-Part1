@@ -102,5 +102,18 @@ namespace COMP123_M2020_Lesson5_Part1
         {
             return new Vector2D(x: -1.0f, y: 1.0f);
         }
+
+        public static float Dot(Vector2D lhs, Vector2D rhs)
+        {
+            return (lhs.x * rhs.x) + (lhs.y * rhs.y);
+        }
+
+        public static float Distance(Vector2D lhs, Vector2D rhs)
+        {
+            float diffXs = (rhs.x - lhs.x);
+            float diffYs = (rhs.y - lhs.y);
+
+            return Convert.ToSingle(Math.Sqrt(diffXs * diffXs + diffYs * diffYs));
+        }
     }
 }

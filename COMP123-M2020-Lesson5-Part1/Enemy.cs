@@ -23,9 +23,11 @@ namespace COMP123_M2020_Lesson5_Part1
 
         // PUBLIC METHODS
 
-        public virtual void FireBullet()                    // override from BossEnemy class
+        public virtual float FireBullet()                    // override from BossEnemy class
         {
             Console.WriteLine("Firing Bullet!");
+
+            return 20.0f;
         }
     }
 }

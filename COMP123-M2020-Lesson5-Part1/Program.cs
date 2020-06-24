@@ -24,6 +24,20 @@ namespace COMP123_M2020_Lesson5_Part1
             Console.WriteLine(player.ToString());
 
 
+            Vector2D vector1 = new Vector2D(x:0.0f, y:3.0f);
+            Vector2D vector2 = new Vector2D(x:4.0f, y:0.0f);
+            Console.WriteLine("Value of vector1 is: " + vector1.ToString());
+            Console.WriteLine("Value of vector2 is: " + vector2.ToString());
+
+
+            float dot = Vector2D.Dot(lhs: vector1, rhs: vector2);
+            Console.WriteLine($"The Dot product is: {dot}");
+
+            float distance = Vector2D.Distance(lhs: vector1, rhs: vector2);
+            Console.WriteLine($"The Distance between vector1 and vector2 is {distance}");
+
+            
+
 
             /*Enemy greenEnemy = new Enemy(name: "Green Enemy");
             Enemy redEnemy = new Enemy(name: "Red Enemy");
