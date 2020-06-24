@@ -25,7 +25,7 @@ namespace COMP123_M2020_Lesson5_Part1
 
         public virtual float FireBullet()                    // override from BossEnemy class
         {
-            Console.WriteLine("Firing Bullet!");
+            Console.WriteLine($"{Name} Firing Bullet!");
 
             return 20.0f;
         }
