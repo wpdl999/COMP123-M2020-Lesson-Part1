@@ -24,7 +24,7 @@ namespace COMP123_M2020_Lesson5_Part1
             Console.WriteLine(player.ToString());
 
             Enemy redEnemy = new Enemy(name: "Red Enemy");
-            player.transform.position = new Vector2D(x: 225.0f, y:200.0f);
+            redEnemy.transform.position = new Vector2D(x: 225.0f, y:200.0f);
             Console.WriteLine(redEnemy.ToString());
 
             float distance = Vector2D.Distance(lhs:player.transform.position, rhs:redEnemy.transform.position);
