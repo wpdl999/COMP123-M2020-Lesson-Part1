@@ -20,8 +20,8 @@ namespace COMP123_M2020_Lesson5_Part1
 
             //player.transform.position = Vector2D.Right();
             
-            player.transform.position += Vector2D.Up() * playerSpeed;
-            Console.WriteLine(player.ToString());
+            //player.transform.position += Vector2D.Up() * playerSpeed;
+            //Console.WriteLine(player.ToString());
 
             Enemy redEnemy = new Enemy(name: "Red Enemy");
             redEnemy.transform.position = new Vector2D(x: 225.0f, y:200.0f);
