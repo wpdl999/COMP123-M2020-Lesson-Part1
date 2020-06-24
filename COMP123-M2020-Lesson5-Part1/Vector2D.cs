@@ -12,6 +12,44 @@ namespace COMP123_M2020_Lesson5_Part1
         public float x;
         public float y;
 
+        // PUBNLIC OPERATOR OVERLOADS
+        public static Vector2D operator +(Vector2D lhs, Vector2D rhs)
+        {
+            float Xs = lhs.x + rhs.x;
+            float Ys = lhs.y + rhs.y;
+            return new Vector2D(x: Xs, y: Ys);
+        }
+
+        public static Vector2D operator -(Vector2D lhs, Vector2D rhs)
+        {
+            float Xs = lhs.x - rhs.x;
+            float Ys = lhs.y - rhs.y;
+            return new Vector2D(x: Xs, y: Ys);
+        }
+
+        public static Vector2D operator *(Vector2D lhs, Vector2D rhs)
+        {
+            float Xs = lhs.x * rhs.x;
+            float Ys = lhs.y * rhs.y;
+            return new Vector2D(x: Xs, y: Ys);
+        }
+
+        public static Vector2D operator *(Vector2D lhs, float rhs)
+        {
+            float Xs = lhs.x * rhs;
+            float Ys = lhs.y * rhs;
+            return new Vector2D(x: Xs, y: Ys);
+        }
+
+
+        public static Vector2D operator /(Vector2D lhs, Vector2D rhs)
+        {
+            float Xs = lhs.x / rhs.x;
+            float Ys = lhs.y / rhs.y;
+            return new Vector2D(x: Xs, y: Ys);
+        }
+
+
         // CONSTRUCTOR
 
         /// <summary>
@@ -37,6 +75,32 @@ namespace COMP123_M2020_Lesson5_Part1
 
 
             return outputString;
+        }
+
+        // PUBLIC STATIC METHODS
+        public static Vector2D Zero()
+        {
+            return new Vector2D(x: 0.0f, y: 0.0f);
+        }
+
+        public static Vector2D Up()
+        {
+            return new Vector2D(x: 0.0f, y: 1.0f);
+        }
+
+        public static Vector2D Down()
+        {
+            return new Vector2D(x: 0.0f, y: -1.0f);
+        }
+
+        public static Vector2D Right()
+        {
+            return new Vector2D(x: 1.0f, y: 0.0f);
+        }
+
+        public static Vector2D Left()
+        {
+            return new Vector2D(x: -1.0f, y: 1.0f);
         }
     }
 }

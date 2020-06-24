@@ -10,16 +10,25 @@ namespace COMP123_M2020_Lesson5_Part1
     {
         static void Main(string[] args)
         {
+            float playerSpeed = 20.0f;          // 20 units
+
             Player player = new Player();
-
-            Enemy greenEnemy = new Enemy(name:"Green Enemy");
-            Enemy redEnemy = new Enemy(name: "Red Enemy");
-
-            BossEnemy bossEnemy = new BossEnemy();
 
             player.RaiseShields();
             player.transform.position = new Vector2D(x: 100.0f, y: 100.0f);
             Console.WriteLine(player.ToString());
+
+            //player.transform.position = Vector2D.Right();
+            
+            player.transform.position += Vector2D.Up() * playerSpeed;
+            Console.WriteLine(player.ToString());
+
+
+
+            /*Enemy greenEnemy = new Enemy(name: "Green Enemy");
+            Enemy redEnemy = new Enemy(name: "Red Enemy");
+
+            BossEnemy bossEnemy = new BossEnemy();
 
             greenEnemy.FireBullet();
             greenEnemy.transform.position = new Vector2D(x: 60.0f, y: 80.0f);
@@ -31,24 +40,26 @@ namespace COMP123_M2020_Lesson5_Part1
 
             bossEnemy.FireBullet();
             bossEnemy.transform.position = new Vector2D(x: 200.0f, y: 200.0f);
-            Console.WriteLine(bossEnemy.ToString());
+            Console.WriteLine(bossEnemy.ToString());*/
 
-            //GameObject player = new GameObject(name:"Player");
+            /*GameObject player = new GameObject(name:"Player");
 
-            //player.transform.position = new Vector2D();
+            player.transform.position = new Vector2D();
 
-            //Console.WriteLine(player.transform.position.ToString());
+            Console.WriteLine(player.transform.position.ToString());
 
-            //Console.WriteLine(player.Name);
-            //Console.WriteLine(player.transform.ToString());
+            Console.WriteLine(player.Name);
+            Console.WriteLine(player.transform.ToString());
 
-            //Console.WriteLine(player.ToString());
+            Console.WriteLine(player.ToString());
 
-            //Console.WriteLine(greenEnemy.ToString());
-            //greenEnemy.FireBullet();
+            Console.WriteLine(greenEnemy.ToString());
+            greenEnemy.FireBullet();
 
-            //Console.WriteLine(redEnemy.ToString());
-            //redEnemy.FireBullet();
+            Console.WriteLine(redEnemy.ToString());
+            redEnemy.FireBullet();*/
+
+
 
             // listen for any key
             Console.ReadLine();
