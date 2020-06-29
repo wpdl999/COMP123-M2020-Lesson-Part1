@@ -8,11 +8,28 @@ namespace COMP123_M2020_Lesson5_Part1
 {
     class Program
     {
+        private static List<GameObject> gameObjects;
+
+        static void Update()
+        {
+            // access each object in the collection
+            foreach (GameObject gameObject in gameObjects)
+            {
+                gameObject.Update();
+            }
+        }
+
+
         static void Main(string[] args)
         {
+            // creates an empty container
+            gameObjects = new List<GameObject>();
+
+
             float playerSpeed = 20.0f;          // 20 units
 
             Player player = new Player();
+            gameObjects.Add(player);
 
             player.RaiseShields();
             player.transform.position = new Vector2D(x: 100.0f, y: 100.0f);
@@ -24,6 +41,7 @@ namespace COMP123_M2020_Lesson5_Part1
             //Console.WriteLine(player.ToString());
 
             Enemy redEnemy = new Enemy(name: "Red Enemy");
+            gameObjects.Add(redEnemy);
             redEnemy.transform.position = new Vector2D(x: 225.0f, y:200.0f);
             Console.WriteLine(redEnemy.ToString());
 
@@ -34,6 +52,7 @@ namespace COMP123_M2020_Lesson5_Part1
             Console.WriteLine(player.ToString());
 
             BossEnemy boss = new BossEnemy();
+            gameObjects.Add(boss);
             boss.transform.position = Vector2D.Zero();
             Console.WriteLine(boss.ToString());
 
@@ -42,6 +61,8 @@ namespace COMP123_M2020_Lesson5_Part1
 
             player.Health -= boss.FireBullet();
             Console.WriteLine(player.ToString());
+
+            Update();
 
 
             /*Vector2D vector1 = new Vector2D(x:0.0f, y:3.0f);                                  //20200624

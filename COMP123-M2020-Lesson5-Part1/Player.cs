@@ -78,7 +78,7 @@ namespace COMP123_M2020_Lesson5_Part1
         public Player()
             : base(name:"Player")
         {
-            m_initialize();
+ 
         }
 
         // PRIVATGE METHODS
@@ -99,6 +99,24 @@ namespace COMP123_M2020_Lesson5_Part1
         {
             Console.WriteLine("Lower Shields");
             ShieldRaised = false;
+        }
+
+        // PUBLIC OVERRIDDEN METHODS
+
+        public override void Start()
+        {
+            Console.WriteLine($"{GetType()} Start Method");
+            m_shieldLevel = 10.0F;
+        }
+
+        public override void Update()
+        {
+            Console.WriteLine($"{GetType()} was Updated");
+        }
+
+        public override void Reset()
+        {
+            
         }
     }
 }

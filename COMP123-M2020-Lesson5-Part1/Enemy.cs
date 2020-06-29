@@ -17,6 +17,7 @@ namespace COMP123_M2020_Lesson5_Part1
         public Enemy(string name)
             : base(name)
         {
+
         }
 
         // PRIVATGE METHODS
@@ -28,6 +29,23 @@ namespace COMP123_M2020_Lesson5_Part1
             Console.WriteLine($"{Name} Firing Bullet!");
 
             return 20.0f;
+        }
+
+        // PUBLIC OVERRIDEEN METHODS (MUST override)
+        public override void Start()
+        {
+            Console.WriteLine($"{GetType()} Start Method");
+            Health = 50.0f;
+        }
+
+        public override void Update()
+        {
+            Console.WriteLine($"{GetType()} was Updated");
+        }
+
+        public override void Reset()
+        {
+
         }
     }
 }
