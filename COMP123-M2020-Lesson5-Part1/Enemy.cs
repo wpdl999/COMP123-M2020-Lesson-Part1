@@ -14,8 +14,8 @@ namespace COMP123_M2020_Lesson5_Part1
 
         // CONSTRUCTOR
 
-        public Enemy(string name)
-            : base(name)
+        public Enemy(GameObjectType type)
+            : base(type)
         {
 
         }
@@ -26,7 +26,7 @@ namespace COMP123_M2020_Lesson5_Part1
 
         public virtual float FireBullet()                    // override from BossEnemy class
         {
-            Console.WriteLine($"{Name} Firing Bullet!");
+            Console.WriteLine($"{Type} Firing Bullet!");
 
             return 20.0f;
         }

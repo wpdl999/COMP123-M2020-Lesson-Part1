@@ -1,30 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace COMP123_M2020_Lesson5_Part1
 {
     abstract class GameObject
     {
         // PRIVATE INSTANCE MEMBERS (FIELDS)
-        private string m_name;
+        private GameObjectType m_type;
         protected float m_health;
 
         // PUBLIC PROPERTIES
         public Transform transform { get; set; }
 
-        public string Name
+        public GameObjectType Type
         {
             get 
             {
-                return m_name;
+                return m_type;
             }
 
             set
             {
-                m_name = value;
+                m_type = value;
             }
         }
 
@@ -51,9 +47,9 @@ namespace COMP123_M2020_Lesson5_Part1
         /// <param name="name"></param>
         /// <param name="health"></param>
 
-        public GameObject(string name, float health = 100.0f)
+        public GameObject(GameObjectType type, float health = 100.0f)
         {
-            Name = name;
+            Type = type;
             Health = health;
 
             m_initialize();
@@ -72,7 +68,7 @@ namespace COMP123_M2020_Lesson5_Part1
         {
             string outputString = "";
 
-            outputString += $"Name    : {Name}\n";
+            outputString += $"Type    : {Type.ToString()}\n";
             outputString += $"Health  : {Health}\n";
             outputString += transform.ToString();
 

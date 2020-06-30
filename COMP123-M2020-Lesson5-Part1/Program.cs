@@ -16,6 +16,19 @@ namespace COMP123_M2020_Lesson5_Part1
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update();
+
+                switch (gameObject.Type)
+                {
+                    case GameObjectType.PLAYER:
+                        Console.WriteLine("Player was accessed");
+                        break;
+                    case GameObjectType.RED_ENEMY:
+                        Console.WriteLine("Red Enemy was accessed");
+                        break;
+                    case GameObjectType.BOSS:
+                        Console.WriteLine("Boss was accessed");
+                        break;
+                }
             }
         }
 
@@ -40,7 +53,7 @@ namespace COMP123_M2020_Lesson5_Part1
             //player.transform.position += Vector2D.Up() * playerSpeed;
             //Console.WriteLine(player.ToString());
 
-            Enemy redEnemy = new Enemy(name: "Red Enemy");
+            Enemy redEnemy = new Enemy(GameObjectType.RED_ENEMY);
             gameObjects.Add(redEnemy);
             redEnemy.transform.position = new Vector2D(x: 225.0f, y:200.0f);
             Console.WriteLine(redEnemy.ToString());
