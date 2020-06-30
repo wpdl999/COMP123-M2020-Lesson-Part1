@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP123_M2020_Lesson5_Part1
 {
-    class Player : GameObject
+    class Player : GameObject, IUpdatable
     {
         // PRIVATE INSTANCE VARIABLES
         private bool m_shieldsRaised;
@@ -105,13 +105,13 @@ namespace COMP123_M2020_Lesson5_Part1
 
         public override void Start()
         {
-            Console.WriteLine($"{GetType()} Start Method");
+            Console.WriteLine($"{Type.ToString()} Start Method");
             m_shieldLevel = 10.0F;
         }
 
-        public override void Update()
+        public void Update()
         {
-            Console.WriteLine($"{GetType()} was Updated");
+            Console.WriteLine($"{Type.ToString()} was Updated");
         }
 
         public override void Reset()

@@ -78,8 +78,6 @@ namespace COMP123_M2020_Lesson5_Part1
         // PUBLIC ABSTRACT METHODS (MUST BE overriden in the derived class)
         public abstract void Start();
 
-        public abstract void Update();
-
         public abstract void Reset();
     }
 }
